@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WiFi File Explorer</string>
+    <string name="title_activity_main">WiFi File Explorer</string>
+    <string name="bt_start_stop">Start / Stop</string>
+    <string name="caption_start">allow access!</string>
+    <string name="caption_stop">stop access…</string>
+</resources>

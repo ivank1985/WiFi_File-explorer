@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<HEAD>
+    <TITLE>Welcome</TITLE>
+
+	<link rel="stylesheet" href="style_main.css">
+        <script type="text/javascript">
+            function sendFilename(){
+                var file = document.getElementById('file');
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", "/upload/"+file.value, false ); // false for synchronous request
+                xmlHttp.send( null );
+            }
+
+	        function rename( filenameOld, fullpath ){
+		        var filenameNew = prompt("Enter and confirm a new file name:", filenameOld);
+
+		        if ( filenameNew != null ){
+			        var xmlHttp = new XMLHttpRequest();
+                	xmlHttp.open( "GET", "/rename"+fullpath + "?" + filenameNew, false ); // false for synchronous request
+                	xmlHttp.send( null );
+		        }
+		        else {return false}
+	        }
+        </script>
+
+</HEAD>
+<body>
+
+<header>
+    <div class = "table">
+        <div class = "line">
+            <div class = "col_label">
+                Select file for upload:
+            </div>
+            <div class = "col_action">
+                <form action="--UPLOAD--" method="POST" enctype="multipart/form-data">
+                    <input id="file" name="File" onchange="sendFilename()" type="file" size="50" accept="text/*">
+                    <input type="submit" value="Upload" onclick="parent.main.location=('/fileList')">...let's do it!</input>
+                </form>
+            </div>
+        </div>
+        <div class = "line">
+            <div class = "col_label">
+                Create a new folder in the current directory:
+            </div>
+            <div class = "col_action">
+                <form action="--NEWDIR--" method="GET" target="left">
+                    <input id="dirname" name="dirname">
+                    <input type="submit" value="Create!">
+                </form>
+            </div>
+        </div>
+        <div class = "line">
+            <div class = "col_label">
+                Currently selected directory:
+            </div>
+            <div class = "col_action">
+                --FULL_PATH--
+            </div>
+        </div>
+
+    </div>
+
+    <div class = "tabelle">
+        <div class = "line">
+            <div class = "file_head_big"> filename </div>
+            <div class = "file_head_small"> type </div>
+            <div class = "file_head_small"> last change </div>
+            <div class = "file_head_small"> size </div>
+            <div class = "file_head_medium"> file operation </div>
+            <div class = "file_head_right">  </div>
+        </div>
+    </div>
+
+
+</header>
+
+<main>
+
+	--LEER--
+
+</main>
+    <div id="footer">
+        <div class = "line">
+            <div class = "cell_big"> --ELEMENTS-- </div>
+            <div class = "cell_big"> --SIZE-- </div>
+        </div>
+    </div>
+
+
+
+
+</BODY>
+</html>

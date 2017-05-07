@@ -1,0 +1,147 @@
+html, body{
+	top : 0;
+	left : 0;
+	right : 0;
+	margin : 0;
+	padding : 0;
+	background-color : rgb(127, 127, 127);
+	height:100%;
+	min-height:100%;
+	overflow: hidden;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	display:table;
+	flex: 0 0 auto;
+	width:100%;
+	top : 0;
+	left : 0;
+	right : 0;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(80, 80, 80, 0.75);
+	-moz-box-shadow:    0px 2px 2px 0px rgba(80, 80, 80, 0.75);
+	box-shadow:         0px 2px 2px 0px rgba(80, 80, 80, 0.75);
+	z-index:10;
+}
+
+main{
+	flex: 1 1 auto;
+	overflow-y: scroll;
+	padding : 0;
+	padding-top:5px;
+	width : 100%;
+	background-color : rgb(200, 200, 200);
+}
+
+div.table{
+	display : table;
+	top : 0;
+	left : 0;
+	right : 0;
+	width : 100%;
+}
+
+tab{
+	margin-left:1em;
+}
+
+div.line{
+	display : table-row;
+}
+
+div.col_label {
+	display : table-cell;
+	height:2em;
+	border-width:2px;
+	border-style:outset;
+	vertical-align: middle;
+}
+
+div.col_action {
+	display : table-cell;
+	height:2em;
+	border-width:2px;
+	border-style:outset;
+	vertical-align: middle;
+}
+
+div.file_head_big {
+	display : table-cell;
+	width : 30%;
+	height: 2em;
+	border-width:2px;
+	border-style:inset;
+	vertical-align: middle;
+}
+
+div.file_head_medium {
+	display : table-cell;
+	width : 28%;
+	height: 2em;
+	border-width:2px;
+	border-style:inset;
+	border-right:none;
+	vertical-align: middle;
+}
+
+div.file_head_right {
+	display : table-cell;
+	border-right: 2px inset;
+	border-top: 2px inset;
+	border-bottom: 2px inset;
+	min-width : 16px;
+}
+
+div.file_head_small {
+	display : table-cell;
+	width : 14%;
+	height: 2em;
+	border-width:2px;
+	border-style:inset;
+	vertical-align: middle;
+}
+
+div.line_light{
+	display : table-row;
+	background-color : rgb(200, 200, 200);
+}
+
+
+div.line_dark{
+	display : table-row;
+	background-color : rgb(175, 175, 175);
+}
+
+
+div.line_big {
+	display : table-cell;
+	width : 30%;
+	padding-left:5px;
+	border-collapse : collapse;
+	background-color : transparent;
+	vertical-align: middle;
+}
+
+div.line_small {
+	display : table-cell;
+	width : 14%;
+	border-collapse : collapse;
+	background-color : transparent;
+	vertical-align: middle;
+}
+
+#footer{
+	display:table;
+	bottom:0;
+	flex: 0 0 auto;
+	background:#efefef;
+	padding:10px;
+	width:100%;
+	-webkit-box-shadow: 0px -1px 2px 0px rgba(80, 80, 80, 0.75);
+	-moz-box-shadow:    0px -1px 2px 0px rgba(80, 80, 80, 0.75);
+	box-shadow:         0px -1px 2px 0px rgba(80, 80, 80, 0.75);
+}
